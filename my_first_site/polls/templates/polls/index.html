@@ -1,18 +1,17 @@
-<!DOCTYPE html>
-<html lang="pt">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Getting Start Django</title>
+    <title>Poll da Hashtag</title>
 </head>
 <body>
-{% if lateste.question_list %}
+{% if latest_question_list %}
     <ul>
     {% for question in latest_question_list %}
-    <li><a href="{% url 'polls:vote' question.id %)">{{ question.question_text }}</a></li>
-    {% endfor %}    
+        <li><a href="{% url 'polls:vote' question.id %}">{{ question.question_text }}</a></li>
+    {% endfor %}
     </ul>
 {% else %}
-    <p>No polls are available</p> 
+    <p>No polls are available.</p>
 {% endif %}
 </body>
 </html>
