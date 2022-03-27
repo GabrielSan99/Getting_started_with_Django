@@ -1,0 +1,3 @@
+sudo django-admin startproject my_first_site   (create project django)
+python manage.py runserver (run server django)
+python manage.py startapp polls (create app)
