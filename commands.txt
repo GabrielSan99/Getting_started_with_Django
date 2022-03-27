@@ -13,3 +13,4 @@ python manage.py shell (Open interactiveconsole)
     q.choice_set.create(choice_text='Bebi bastante agua hoje', votes = 0)   (set that two alternatives for id Question 2)
     q.choice_set.create(choice_text='Nao bebi agua hoje', votes = 0)   
 
+python manage.py createsuperuser  (create user to use admin page)
