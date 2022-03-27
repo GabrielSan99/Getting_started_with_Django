@@ -1,3 +1,15 @@
 sudo django-admin startproject my_first_site   (create project django)
 python manage.py runserver (run server django)
 python manage.py startapp polls (create app)
+python manage.py migrate (send data format to database sqlite)
+python manage.py makemigrations (make models changes to database, after this is necessary migrate your new migration)
+python manage.py shell (Open interactiveconsole)
+    from polls.models import Questions, Choice
+    from django.utils import timezone
+    q = Question(question_text="Ja bebeu agua hoje?", pub_date=timezone.now())
+    q.save() (on my case, this question has id=2 because I type wrong)
+    q = Question.objects.get(id=2)
+    q.choice_set.all() (show as alternatives)
+    q.choice_set.create(choice_text='Bebi bastante agua hoje', votes = 0)   (set that two alternatives for id Question 2)
+    q.choice_set.create(choice_text='Nao bebi agua hoje', votes = 0)   
+
